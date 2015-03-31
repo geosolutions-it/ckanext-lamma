@@ -1,0 +1,89 @@
+/*----------------Override of ckan base css---------------------*/
+
+body {
+  background: #222b43;
+}
+
+a {
+  color: #2a517b;
+  text-decoration: none;
+}
+
+.hero {
+  background: #ffffff;
+}
+
+[role=main],
+.main {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background: #ffffff;
+}
+
+.homepage .module-search .module-content {
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  background-color: #222b43;
+  border-bottom: none;
+}
+
+.homepage .module-search .tags {
+  *zoom: 1;
+  padding: 5px 10px 10px 10px;
+  background-color: #4e791e;
+  -webkit-border-radius: 0 0 3px 3px;
+  -moz-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+}
+
+.masthead {
+  *zoom: 1;
+  min-height: 55px;
+  color: #ffffff;
+  background: #222b43;
+}
+
+.account-masthead {
+  *zoom: 1;
+  min-height: 30px;
+  color: #ffffff;
+  background: #222b43;
+}
+
+.site-footer {
+  *zoom: 1;
+  min-height: 55px;
+  color: #ffffff;
+  background: #4e791e;
+  padding: 20px 0;
+}
+
+.btn-primary {
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #1b95d4;
+  background-image: -moz-linear-gradient(top, #1b95d4, #085871);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1b95d4), to(#085871));
+  background-image: -webkit-linear-gradient(top, #1b95d4, #085871);
+  background-image: -o-linear-gradient(top, #1b95d4, #1b95d4);
+  background-image: linear-gradient(to bottom, #1b95d4, #085871);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff30778d', endColorstr='#ff085871', GradientType=0);
+  border-color: #085871 #085871 #03202a;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #085871;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+/*----------------Override of ckanext-mapstore css---------------------*/
+
+.dataset-resources .basket-label-cart {
+  background-color: #222b43;
+}
+
+.dataset-resources .basket-label-preview {
+  background-color: #4e791e;
+}
