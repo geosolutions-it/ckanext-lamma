@@ -53,6 +53,7 @@
               {% if h.check_access('user_create') %}
                 <li>{% link_for _('Register'), controller='user', action='register', class_='sub' %}</li>
               {% endif %}
+			  <li class="language_lamma"> {% snippet "snippets/language_selector.html" %}</li>
               {% endblock %}
             </ul>
           </nav>
@@ -87,13 +88,13 @@
 
     </hgroup>
 
-    <div class="content">
+    <div style="position: static;" class="content">
 
       {% block header_site_navigation %}
         <nav class="section navigation">
           <ul class="nav nav-pills">
             {% block header_site_navigation_tabs %}
-              {{ h.build_nav_main(
+              {{ h.build_nav_main_lamma(
                 ('search', _('Datasets')),
                 ('organizations_index', _('Organizations')),
                 ('group_index', _('Groups')),
@@ -105,13 +106,13 @@
       {% endblock %}
 
       {% block header_site_search %}
-        <form class="section site-search simple-input" action="{% url_for controller='package', action='search' %}" method="get">
+        <!--form class="section site-search simple-input" action="{% url_for controller='package', action='search' %}" method="get">
           <div class="field">
             <label for="field-sitewide-search">{{ _('Search Datasets') }}</label>
             <input id="field-sitewide-search" type="text" name="q" placeholder="{{ _('Search datasets...') }}" />
             <button class="btn-search" type="submit"><i class="icon-search"></i></button>
           </div>
-        </form>
+        </form-->
       {% endblock %}
 
     </div>

@@ -1,7 +1,7 @@
 /*----------------Override of ckan base css---------------------*/
 
 body {
-  background: #222b43;
+  background: #4e791e;
 }
 
 a {
@@ -25,14 +25,16 @@ a {
   -webkit-border-radius: 3px 3px 0 0;
   -moz-border-radius: 3px 3px 0 0;
   border-radius: 3px 3px 0 0;
-  background-color: #222b43;
+  /*background-color: #222b43;*/
+  background-color: rgba(34, 43, 67, 0.9);
   border-bottom: none;
 }
 
 .homepage .module-search .tags {
   *zoom: 1;
   padding: 5px 10px 10px 10px;
-  background-color: #4e791e;
+  /*background-color: #4e791e;*/
+  background-color:rgba(78, 121, 30, 0.9);
   -webkit-border-radius: 0 0 3px 3px;
   -moz-border-radius: 0 0 3px 3px;
   border-radius: 0 0 3px 3px;
@@ -43,6 +45,11 @@ a {
   min-height: 55px;
   color: #ffffff;
   background: #222b43;
+}
+
+.masthead .site-search {
+  margin: 2px 8px 2px 0;
+  float: right;
 }
 
 .account-masthead {
@@ -63,12 +70,12 @@ a {
 .btn-primary {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #1b95d4;
-  background-image: -moz-linear-gradient(top, #1b95d4, #085871);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1b95d4), to(#085871));
-  background-image: -webkit-linear-gradient(top, #1b95d4, #085871);
-  background-image: -o-linear-gradient(top, #1b95d4, #1b95d4);
-  background-image: linear-gradient(to bottom, #1b95d4, #085871);
+  background-color: #222b43;
+  background-image: -moz-linear-gradient(top, #222b43, #085871);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222b43), to(#085871));
+  background-image: -webkit-linear-gradient(top, #222b43, #085871);
+  background-image: -o-linear-gradient(top, #222b43, #222b43);
+  background-image: linear-gradient(to bottom, #222b43, #085871);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff30778d', endColorstr='#ff085871', GradientType=0);
   border-color: #085871 #085871 #03202a;
@@ -76,6 +83,22 @@ a {
   *background-color: #085871;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.masthead .navigation .nav-pills li a:hover, .masthead .navigation .nav-pills li.active a {
+  background-color: #ffffff;
+}
+
+.account-masthead .account ul li {
+  display: block;
+  float: left;
+  border-left: 0px solid #00232e;
+}
+
+.attribution {
+  float: left;
+  margin-left: 180px;
+  width: 300px;
 }
 
 /*----------------Override of ckanext-mapstore css---------------------*/
@@ -86,4 +109,65 @@ a {
 
 .dataset-resources .basket-label-preview {
   background-color: #4e791e;
+}
+
+/*----------------Custom additional css---------------------*/
+
+.blue_bg{
+	background: url(../images/menublu_right.png) no-repeat right top;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	margin-left: 3px;
+}
+
+.blue_bg a{
+	color: #000000;
+}
+
+.blue_bg:hover{
+	background: #ffffff;
+}
+
+.green_bg{
+	background: url(../images/menugreen_right.png) no-repeat right top;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	margin-left: 3px;
+}
+
+.green_bg a{
+	color: #000000;
+}
+
+.green_bg:hover{
+	background: #ffffff;
+}
+
+.active_lamma{
+	background: url(../images/menuhover_right.png) no-repeat right top;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	margin-left: 3px;
+}
+
+.active_lamma a{
+	color: #000000;
+}
+
+.language_lamma form label{
+  display: block;
+  color: #bfd7de;
+  font-size: 13px;
+  font-weight: normal;
+  padding: 0 10px;
+  line-height: 31px;
+}
+
+#select2-chosen-1{
+	color:#000000;
+	font-weight: normal;
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 31px;
 }
