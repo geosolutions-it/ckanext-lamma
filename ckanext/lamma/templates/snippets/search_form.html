@@ -3,15 +3,15 @@
 {% set placeholder = placeholder if placeholder else _('Search datasets...') %}
 
 {% set sorting = [
+        ("Data Metadato", 'metadata-date desc'),
         (_('Relevance'), 'score desc, metadata_modified desc'),
         (_('Name Ascending'), 'title_string asc'),
         (_('Name Descending'), 'title_string desc'),
         (_('Last Modified'), 'metadata_modified desc'),
-        ("Data Metadato", 'metadata-date desc'),
         (_('Popular'), 'views_recent desc') if g.tracking_enabled else (false, false) ]
 %}
 
-{% set sorting_selected = 'metadata-date desc' %}
+{% set sorting_selected = sorting_selected if sorting_selected else 'metadata-date desc' %}
 
 {% set search_class = search_class if search_class else 'search-giant' %}
 {% set no_bottom_border = no_bottom_border if no_bottom_border else false %}
