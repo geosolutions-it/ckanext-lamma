@@ -2,7 +2,7 @@
 
 {% set placeholder = placeholder if placeholder else _('Search datasets...') %}
 
-{% set sorting = [
+{% set sorting_ovr = [
         ("Data Metadato", 'metadata-date desc'),
         (_('Relevance'), 'score desc, metadata_modified desc'),
         (_('Name Ascending'), 'title_string asc'),
@@ -11,6 +11,7 @@
         (_('Popular'), 'views_recent desc') if g.tracking_enabled else (false, false) ]
 %}
 
+{% set sorting = sorting_ovr if sorting else [(_('Name Ascending'), 'name asc'), (_('Name Descending'), 'name desc')] %}
 {% set sorting_selected = sorting_selected if sorting_selected else 'metadata-date desc' %}
 
 {% set search_class = search_class if search_class else 'search-giant' %}
