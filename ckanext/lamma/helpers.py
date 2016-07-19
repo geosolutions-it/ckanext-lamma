@@ -2,7 +2,10 @@ import logging
 
 import ckan
 import ckan.plugins as p
+import ckan.logic as logic
 import ckan.lib.helpers as h
+
+import re
 
 log = logging.getLogger(__name__)
 
@@ -61,3 +64,65 @@ def _make_menu_item_lamma(menu_item, title, **kw):
 
     return h.literal('<li class="green_bg">') + link + h.literal('</li>')
 
+def lamma_groups_available():
+    '''
+    Return a list of the groups.
+    '''
+
+    context = {}
+    data_dict = {'sort': 'packages', 'all_fields': 1}
+    return logic.get_action('group_list')(context, data_dict)
+
+def get_full_groups_facetslist(fname, facets):
+    '''
+	Return a complete list of groups facet.
+    '''
+    ##log.info('FACET_NAME::::::::::::::::::::::::::: %r', fname)
+	
+    context = {}
+    data_dict = {'sort': 'packages', 'all_fields': 1}
+    groups = logic.get_action('group_list')(context, data_dict)
+	
+    ##log.info('GROUPS::::::::::::::::::::::::::: %r', groups)
+
+    fnames = []
+    for facet in facets:
+        fnames.append(facet['display_name'])
+    	##log.info('::::::::::::::::::::::::::: %r', facet['display_name'])
+	
+    for group in groups:
+	##log.info('::::::::::::::::::::::::::: %r', group)
+    	d_name = group['display_name']
+
+        ##log.info('GROUP_NAME::::::::::::::::::::::::::: %r', d_name)
+	
+	if d_name not in fnames:
+	        new_facet = {
+        	       'display_name': d_name,
+                       'count': 0,
+                       'active': False,
+		       'disabled': True,
+                       'name': group['name']
+                }
+
+		facets.append(new_facet)
+
+    ##
+    ## ORDER the Facets by cat number
+    ##    
+
+    ##log.info('FACETS::::::::::::::::::::::::::: %r', facets)
+
+    for facet in facets:
+	cat_number = str(facet['name'])
+	cat_number = re.findall("\d+", cat_number)
+	##log.info('CATNUMBER::::::::::::::::::::::::::: %r', cat_number[0])
+        facet['number'] = int(cat_number[0])
+
+    ##log.info('FACETS::::::::::::::::::::::::::: %r', facets)
+
+    facets = sorted(facets, key=lambda item: item['number'])
+
+    ##log.info('FACETS::::::::::::::::::::::::::: %r', facets)
+
+    return facets
