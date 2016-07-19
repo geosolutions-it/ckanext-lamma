@@ -53,7 +53,7 @@
               {% if h.check_access('user_create') %}
                 <li>{% link_for _('Register'), controller='user', action='register', class_='sub' %}</li>
               {% endif %}
-			  <li class="language_lamma"> {% snippet "snippets/language_selector.html" %}</li>
+			  {#<li class="language_lamma"> {% snippet "snippets/language_selector.html" %}</li>#}
               {% endblock %}
             </ul>
           </nav>

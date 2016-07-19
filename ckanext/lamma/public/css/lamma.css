@@ -101,13 +101,13 @@ a {
   width: 300px;
 }
 
-.format-label[data-format=zip], .format-label[data-format*=zip] {
+/*.format-label[data-format=zip], .format-label[data-format*=zip] {
   background: url(../images/zip-image-small.png) no-repeat;
 }
 
 .format-label[data-format=wms], .format-label[data-format*=wms] {
   background: url(../images/world-map-small.png) no-repeat right top;
-}
+}*/
 
 a.tag:hover {
   text-decoration: none;
@@ -129,6 +129,17 @@ a.tag:hover {
   background-color: #4e791e;
 }
 
+.lamma-media-grid{
+    list-style: none;
+
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-width: 1px 0;
+    position: relative;
+    width: 940px;
+    height: 900px;
+    margin: 0px 0px 0px 0px;
+}
 /*----------------Custom additional css---------------------*/
 
 .blue_bg{
@@ -188,4 +199,228 @@ a.tag:hover {
     font-size: 14px;
     font-weight: normal;
     line-height: 31px;
+}
+
+.lamma-group-item{
+	text-align: center;
+	font-size: 12px;
+    margin: 0px 0px 13px 13px;
+}
+
+.lamma-group-item h3{
+	text-align: center;
+	font-size: 14px;
+}
+
+/*------------------- Dataset Page -----------------------*/
+
+.label[data-format=zip] {
+    background-color: #444444;
+}
+
+.label[data-format=geojson] {
+    background-color: #9E3F48;
+}
+
+.format-label[data-format=geojson-big],
+.format-label[data-format*=geojson-big] {
+    background: url("../images/icons/gis-resources-sprite-icons.png") no-repeat 0 0;
+    background-position: -232px 0px;
+	width: 57px;
+    height: 60px;
+}
+
+.label[data-format=kml] {
+    background-color: #2E3E94;
+}
+
+.format-label[data-format=kml-big],
+.format-label[data-format*=kml-big] {
+    background: url("../images/icons/gis-resources-sprite-icons.png") no-repeat 0 0;
+    background-position: -174px 0px;
+	width: 57px;
+    height: 60px;
+}
+
+.format-label[data-format=kml-ge-big],
+.format-label[data-format*=kml-ge-big] {
+    background: url("../images/icons/gis-resources-sprite-icons.png") no-repeat 0 0;
+    background-position: -754px 0px;
+	width: 57px;
+    height: 60px;
+}
+
+
+.label[data-format=gml] {
+    background-color: #908C2E;
+}
+
+.label[data-format*=gml] {
+    background-color: #908C2E;
+}
+
+.format-label[data-format=gml-big],
+.format-label[data-format*=gml] {
+    background: url("../images/icons/gis-resources-sprite-icons.png") no-repeat 0 0;
+    background-position: -64px -62px;
+    width: 32px;
+    height: 35px;
+}
+
+.format-label[data-format=two-big],
+.format-label[data-format*=two-big] {
+    background: url("../images/icons/gis-resources-sprite-icons.png") no-repeat 0 0;
+    background-position: -580px -0px;
+    width: 57px;
+    height: 60px;
+}
+
+.format-label[data-format=wfs-big],
+.format-label[data-format*=wfs-big] {
+    background: url("../images/icons/gis-resources-sprite-icons.png") no-repeat 0 0;
+    background-position: 0px 0px;
+    width: 57px;
+    height: 60px;
+}
+
+.label[data-format=wfs] {
+    background-color: #7aae3d;
+}
+.format-label[data-format=wfs],
+.format-label[data-format*=wfs] {
+    background: url("../images/icons/gis-resources-sprite-icons.png") no-repeat 0 0;
+    background-position: 0px -62px;
+}
+
+.label[data-format=shp] {
+    background-color: #92348C;
+}
+
+.format-label[data-format=shp-big],
+.format-label[data-format*=shp-big] {
+    background: url("../images/icons/gis-resources-sprite-icons.png") no-repeat 0 0;
+    background-position: -348px 0px;
+	width: 57px;
+    height: 60px;
+}
+
+.format-label[data-format=pdf-big],
+.format-label[data-format*=pdf-big] {
+    background: url("../images/icons/gis-resources-sprite-icons.png") no-repeat 0 0;
+    background-position: -406px 0px;
+	width: 57px;
+    height: 60px;
+}
+
+.format-label[data-format=xls-big],
+.format-label[data-format*=xls-big] {
+    background: url("../images/icons/gis-resources-sprite-icons.png") no-repeat 0 0;
+    background-position: -464px 0px;
+	width: 57px;
+    height: 60px;
+}
+
+.format-label[data-format=csv-big],
+.format-label[data-format*=csv-big] {
+    background: url("../images/icons/gis-resources-sprite-icons.png") no-repeat 0 0;
+    background-position: -522px 0px;
+	width: 57px;
+    height: 60px;
+}
+
+.label[data-format=png] {
+    background-color: #A97428;
+}
+
+.format-label[data-format=png-big],
+.format-label[data-format*=png-big] {
+    background: url("../images/icons/gis-resources-sprite-icons.png") no-repeat 0 0;
+    background-position: -696px 0px;
+	width: 57px;
+    height: 60px;
+}
+
+/*.format-label[data-format=png],
+.format-label[data-format*=png] {
+    background: url("../images/icons/gis-resources-sprite-icons.png") no-repeat 0 0;
+    background-position: -380px -62px;
+	width: 57px;
+    height: 60px;
+}*/
+
+.label[data-format=jpeg] {
+    background-color: #EA5D10;
+}
+
+.format-label[data-format=jpeg-big],
+.format-label[data-format*=jpeg-big] {
+    background: url("../images/icons/gis-resources-sprite-icons.png") no-repeat 0 0;
+    background-position: -638px 0px;
+	width: 57px;
+    height: 60px;
+}
+
+/*.format-label[data-format=jpeg],
+.format-label[data-format*=jpeg] {
+    background: url("../images/icons/gis-resources-sprite-icons.png") no-repeat 0 0;
+    background-position: -350px -62px;
+	width: 57px;
+    height: 60px;
+}*/
+
+.label[data-format=map] {
+    background-color: #1f6443;
+}
+.format-label[data-format=map] {
+    background: url("../images/icons/gis-resources-sprite-icons.png") no-repeat 0 0;
+    background-position: -416px -62px;
+}
+
+.download-icons{
+  margin-left: 0px;
+  margin-right: 220px;
+}
+
+.label[data-format=wms] {
+    background-color: #adc717;
+}
+.format-label[data-format=wms],
+.format-label[data-format*=wms] {
+    background: url("../images/icons/gis-resources-sprite-icons.png") no-repeat 0 0;
+    background-position: -32px -62px;
+}
+
+.label[data-format*=tiff] {
+    background-color: #ea5d10;
+}
+
+.format-label[data-format=tiff],
+.format-label[data-format=tiff] {
+    background: url("../images/icons/gis-resources-sprite-icons.png") no-repeat 0 0;
+    background-position: -448px -62px;
+    
+.format-label[data-format=wms-big],
+.format-label[data-format*=wms-big] {
+    background: url("../images/icons/gis-resources-sprite-icons.png") no-repeat 0 0;
+    background-position: 0px 0px;
+    width: 57px;
+    height: 60px;
+}
+
+.label[data-format=wmts] {
+    background-color: #3333ff;
+}
+.format-label[data-format=wmts],
+.format-label[data-format*=wmts] {
+    background: url("../images/icons/gis-resources-sprite-icons.png") no-repeat 0 0;
+    background-position: -162px -62px;
+}
+
+.label[data-format=mapstore] {
+    background-color: #337794;
+}
+.format-label[data-format=mapstore],
+.format-label[data-format*=mapstore] {
+    background: url("../images/icons/gis-resources-sprite-icons.png") no-repeat 0 0;
+    background-position: -194px -62px;
 }

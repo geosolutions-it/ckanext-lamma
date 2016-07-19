@@ -3,7 +3,6 @@ import ckan.plugins.toolkit as toolkit
 
 class LammaThemePlugin(plugins.SingletonPlugin):
         '''An example theme plugin.
-
         '''
         # Declare that this class implements IConfigurer.
         plugins.implements(plugins.IConfigurer)
@@ -24,5 +23,5 @@ class LammaThemePlugin(plugins.SingletonPlugin):
         	from ckanext.lamma import helpers as lamma_helpers
         	return {
                 	'build_nav_main_lamma': lamma_helpers.build_nav_main_lamma,
-			'_make_menu_item_lamma': lamma_helpers._make_menu_item_lamma,
+			'_make_menu_item_lamma': lamma_helpers._make_menu_item_lamma, 'lamma_groups_available': lamma_helpers.lamma_groups_available, 'get_full_groups_facetslist': lamma_helpers.get_full_groups_facetslist,
  	       	}

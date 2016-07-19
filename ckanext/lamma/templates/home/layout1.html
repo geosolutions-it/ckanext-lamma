@@ -1,0 +1,21 @@
+
+{% set groups = h.lamma_groups_available() %}
+
+<div role="main" class="hero">
+  <div class="container">
+    {% snippet 'home/snippets/search.html' %}
+  </div>
+</div>
+<div role="main">
+  <div class="container">
+    <div class="row row2">
+      {#<div class="span6 col2">
+        {% snippet 'home/snippets/promoted.html' %} 
+      </div>#}
+      <div class="span6 col1">
+        {# {% snippet 'home/snippets/stats.html' %} #}
+        {% snippet "group/snippets/group_list_lamma.html", groups=groups %}
+      </div> 
+    </div>
+  </div>
+</div>
